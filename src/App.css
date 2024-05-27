@@ -13,4 +13,42 @@
 
 .App {
   margin-left: 15px;
+  margin-right: 15px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
 }
+
+
+.main {
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* Background won't scroll with content */
+  background-position: center;
+  background-size: cover;
+}
+
+.image-layer1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300vh; /* Adjust height as needed */
+  background-image: url("image3.jpg");
+  background-attachment: fixed; /* Slowest movement (fixed to viewport) */
+  background-size: cover;
+  z-index: -1;
+}
+
+.image-layer2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150vh; /* Adjust height as needed */
+  background-image: url("image4.jpg");
+  background-attachment: scroll; /* Medium speed (scrolls with content) */
+  background-size: cover;
+  z-index: -1;
+}
+
